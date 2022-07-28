@@ -1,11 +1,20 @@
 import './App.css';
 
+function CardBorderProperty(props) {
+  return (
+    <div className="CardBorder">
+      {props.children}
+    </div>
+  );
+}
 
 function ChildCard() {
   return(
-    <div className="cardContents">
-      Filler
-    </div>
+    <CardBorderProperty>
+      <div className="cardContents">
+        Filler
+      </div>
+    </CardBorderProperty>
   ) 
 }
 
@@ -19,11 +28,11 @@ function App() {
       </div>
 
       <div className="Exhibit">
-        <header>
+        <h1>
           Exhibit
-        </header>
+        </h1>
 
-        <ChildCard/>
+        <ChildCard />
       </div>
     </div>
   );
