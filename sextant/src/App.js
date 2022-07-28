@@ -8,7 +8,7 @@ function CardBorderProperty(props) {
   );
 }
 
-function ChildCard() {
+function Card() {
   return(
     <CardBorderProperty>
       <div className="cardContents">
@@ -32,7 +32,11 @@ function App() {
           Exhibit
         </h1>
 
-        <ChildCard />
+        <div className="ChildCard">
+          <Card />
+          <Card />
+        </div>
+        
       </div>
     </div>
   );

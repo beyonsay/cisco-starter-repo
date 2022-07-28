@@ -1,9 +1,16 @@
 header {
   font-size: large;
+  padding-top: 2vh;
+  font-family: "Helvetica Neue";
+  font-size: 2em;
+  font-weight: 600;
 }
 
 h1 {
   font-size: large;
+  font-family: "Fira Sans";
+  font-size: 2em;
+  font-weight: 400;
 }
 
 .App {
@@ -37,19 +44,24 @@ h1 {
 }
 
 .CardBorder{
-  height: 200px;
-  width: 300px;
+  height: 50vh;
+  width: 30vw;
   background: #f2f2f2;
   border-radius: 15px;
-  box-shadow: 0 0 10px 8px #d0d0d0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .Banner {
-  height: 50px;
-  width: 100%;
-  background: #f2f2f2;
-  border-radius: 15px;
-  box-shadow: 0 0 10px 8px #d0d0d0;
+  height: 3em;
+  width: 100vw;
+  justify-items: center;
+}
+
+.ChildCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  height:auto;
 }
 
 @keyframes App-logo-spin {
