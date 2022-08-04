@@ -8,17 +8,34 @@ function CardBorderProperty(props) {
   );
 }
 
-function Card() {
+function Card(props) {
   return(
     <CardBorderProperty>
       <div className="cardContents">
-        Filler
+        {props.content}
       </div>
     </CardBorderProperty>
   ) 
 }
 
+async function getIP() {
+  var val = "";
+  
+  fetch('https://api64.ipify.org?format=json')
+  .then((response) => response.json())
+  //.then((data) => val = data);
+  .then((data) => {
+    val = data.ip;
+    console.log(data.ip);}
+  );
+
+  return val;
+}
+
 function App() {
+  var val = getIP();
+  console.log(val.ip);
+
   return (
     <div className="App">
       <div className="Banner">
@@ -33,7 +50,7 @@ function App() {
         </h1>
 
         <div className="ChildCard">
-          <Card />
+          <Card content = {''} />
           <Card />
         </div>
         
